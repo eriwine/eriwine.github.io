@@ -1,18 +1,27 @@
 {
   "name": "fun-with-pixi",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eric Winebrenner",
   "license": "ISC",
   "dependencies": {
     "pixi.js": "^4.7.3"
   },
   "devDependencies": {
     "browser-sync": "^2.24.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriwine/eriwine.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eriwine/eriwine.github.io/issues"
+  },
+  "homepage": "https://github.com/eriwine/eriwine.github.io#readme",
+  "description": ""
 }

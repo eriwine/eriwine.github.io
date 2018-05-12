@@ -2,6 +2,8 @@ const log = console.log;
 const app = new PIXI.Application();
 document.body.appendChild(app.view);
 
+let text = new PIXI.Text("why won't this work?",{fontFamily : 'Arial', fontSize: 24, fill : 0xff1010, align : 'center'});
+app.stage.addChild(text);
 
 const button = PIXI.Sprite.fromImage("Button.png");
 button.interactive = true;
