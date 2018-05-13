@@ -16,11 +16,18 @@ renderer.view.style.transform = 'translate3d( -50%, -50%, 0 )';
 
 document.body.appendChild(renderer.view);
 
+var w,h;
+w = window.innerWidth;
+h = window.innerHeight;
+renderer.view.style.width = w + "px";
+renderer.view.style.height = h + "px";
+renderer.resize(w, h);
+
 var container = new PIXI.Container();
 app.stage.addChild(container);
 
 let bgTexture = PIXI.Texture.fromImage("BackgroundTexture.png");
-var background = new PIXI.extras.TilingSprite(bgTexture,STAGE_WIDTH,STAGE_HEIGHT);
+var background = new PIXI.extras.TilingSprite(bgTexture,w,h);
 container.addChild(background);
 
 var titleStyle = new PIXI.TextStyle({
@@ -58,14 +65,14 @@ var titleStyle2 = new PIXI.TextStyle({
 });
 
 var richText = new PIXI.Text('Hello, welcome to my portfolio.', titleStyle);
-richText.x = STAGE_WIDTH / 2;
-richText.y = STAGE_HEIGHT / 5;
+richText.x = w / 2;
+richText.y = h / 5;
 richText.anchor.set(0.5);
 container.addChild(richText);
 
 var title2 = new PIXI.Text('Made entirely in Pixi.JS', titleStyle2);
-title2.x = STAGE_WIDTH / 2;
-title2.y = STAGE_HEIGHT / 5 + 96;
+title2.x = w / 2;
+title2.y = h / 5 + 96;
 title2.anchor.set(0.5);
 container.addChild(title2);
 
@@ -73,8 +80,8 @@ var button = PIXI.Sprite.fromImage("Button.png");
 button.interactive = true;
 button.buttonMode = true;
 button.anchor.set(0.5);
-button.x = STAGE_WIDTH/2;
-button.y = STAGE_HEIGHT/2;
+button.x = w/2;
+button.y = h/2;
 button.dragOffsetX = 0;
 button.dragOffsetY = 0; 
 container.addChild(button);
