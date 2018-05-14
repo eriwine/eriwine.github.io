@@ -5,6 +5,22 @@
         <title>Eric Winebrenner</title>
     </head>
     <script src="node_modules/pixi.js/dist/pixi.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://rawgit.com/matt-way/gifuct-js/master/dist/gifuct-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script>
+    // https://github.com/typekit/webfontloader
+    fontsLoaded = false;
+    WebFont.load({
+        google: {
+            families: ['Josefin Sans']
+        },
+        loading: function() { console.log('Font(s) Loading'); },
+        active: function() { console.log('Font(s) Loaded'); fontsLoaded = true; },
+        inactive: function() { console.log('Font(s) Failure'); }
+    });
+    </script>
     <body> 
         <script type="text/javascript" src="index.js"></script>
     </body>
